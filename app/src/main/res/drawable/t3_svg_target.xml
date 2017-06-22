@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="400dp"
+    android:viewportHeight="400"
+    android:viewportWidth="400">
+    <group>
+
+        <path android:fillColor="@color/sun"
+            android:pathData="M 190,200
+                              a 10,10,0,1,0,20,0
+                              a 10,10,0,1,0,-20,0" />
+
+        <group android:name="mercury"
+            android:pivotX="200"
+            android:pivotY="200"
+            android:rotation="0">
+
+            <path android:strokeColor="@color/path"
+                android:pathData="M 240,200
+                                  a 20,20,0,1,0,-80,0
+                                  a 20,20,0,1,0,80,0"/>
+
+            <path android:fillColor="@color/mercury"
+                android:pathData="M 236,200
+                                  a 4,4,0,1,0,8,0
+                                  a 4,4,0,1,0,-8,0"/>
+        </group>
+
+        <group android:name="venus"
+            android:pivotX="200"
+            android:pivotY="200"
+            android:rotation="0">
+
+            <path android:strokeColor="@color/path"
+                android:pathData="M 270,200
+                                  a 20,20,0,1,0,-140,0
+                                  a 20,20,0,1,0,140,0"/>
+
+            <path android:fillColor="@color/venus"
+                android:pathData="M 266,200
+                                  a 4,4,0,1,0,8,0
+                                  a 4,4,0,1,0,-8,0"/>
+        </group>
+
+        <group
+            android:name="earth"
+            android:pivotX="200"
+            android:pivotY="200"
+            android:rotation="0" >
+
+            <path android:strokeColor="@color/path"
+                android:pathData="M 300,200
+                                  a 20,20,0,1,0,-200,0
+                                  a 20,20,0,1,0,200,0"/>
+
+            <path android:fillColor="@color/earth"
+                android:pathData="M 295,200
+                                  a 5,5,0,1,0,10,0
+                                  a 5,5,0,1,0,-10,0"/>
+
+            <group android:name="moon"
+                android:pivotX="300"
+                android:pivotY="200"
+                android:rotation="0">
+                <path android:strokeColor="@color/path"
+                    android:pathData="M 320,200
+                                      a 2,2,0,1,0,-40,0
+                                      a 2,2,0,1,0,40,0"/>
+
+                <path android:fillColor="@color/moon"
+                    android:pathData="M 318,200
+                                      a 2,2,0,1,0,4,0
+                                      a 2,2,0,1,0,-4,0"/>
+            </group>
+        </group>
+
+        <group android:name="mars"
+            android:pivotX="200"
+            android:pivotY="200"
+            android:rotation="0">
+
+            <path android:strokeColor="@color/path"
+                android:pathData="M 360,200
+                                  a 20,20,0,1,0,-320,0
+                                  a 20,20,0,1,0,320,0"/>
+
+            <path android:fillColor="@color/mars"
+                android:pathData="M 356,200
+                                  a 4,4,0,1,0,8,0
+                                  a 4,4,0,1,0,-8,0"/>
+        </group>
+    </group>
+</vector>
+

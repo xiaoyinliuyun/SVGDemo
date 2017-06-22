@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/t3_svg_target">
+    <target
+        android:animation="@animator/t3_anim_mercury"
+        android:name="mercury"/>
+    <target
+        android:animation="@animator/t3_anim_venus"
+        android:name="venus"/>
+    <target
+        android:animation="@animator/t3_anim_earth"
+        android:name="earth"/>
+    <target
+        android:animation="@animator/t3_anim_mars"
+        android:name="mars"/>
+    <target
+        android:animation="@animator/t3_anim_moon"
+        android:name="moon"/>
+
+</animated-vector>

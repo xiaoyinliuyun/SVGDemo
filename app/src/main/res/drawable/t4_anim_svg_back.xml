@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/t4_svg_back">
+    <target
+        android:animation="@animator/t4_anim_path1"
+        android:name="path1"/>
+    <target
+        android:animation="@animator/t4_anim_path3"
+        android:name="path3"/>
+    <target
+        android:animation="@animator/t4_anim_back"
+        android:name="back"/>
+
+</animated-vector>
