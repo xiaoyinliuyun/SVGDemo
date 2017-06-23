@@ -1,6 +1,7 @@
 package com.yangkunjian.svgdemo;
 
 import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,23 +9,23 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView ivLoading, ivSunEarthMoon, ivDemo2, ivBack, ivSearch;
+    ImageView ivPendulum1, ivPendulum2, ivSunEarthMoon, ivDemo2, ivBack, ivSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ivLoading = (ImageView) findViewById(R.id.ivLoading);
-        restart((Animatable) ivLoading.getDrawable());
+        ivPendulum1 = (ImageView) findViewById(R.id.ivPendulum1);
+        restart(ivPendulum1.getDrawable());
 
         ivSunEarthMoon = (ImageView) findViewById(R.id.ivSunEarthMoon);
-        restart((Animatable) ivSunEarthMoon.getDrawable());
+        restart(ivSunEarthMoon.getDrawable());
 
         ivDemo2 = (ImageView) findViewById(R.id.ivDemo2);
         ivDemo2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                restart((Animatable) ivDemo2.getDrawable());
+                restart(ivDemo2.getDrawable());
             }
         });
 
@@ -32,32 +33,38 @@ public class MainActivity extends AppCompatActivity {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                restart((Animatable) ivBack.getDrawable());
+                restart(ivBack.getDrawable());
             }
         });
         ivSearch = (ImageView) findViewById(R.id.ivSearch);
         ivSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                restart((Animatable) ivSearch.getDrawable());
+                restart(ivSearch.getDrawable());
             }
         });
     }
 
-    private void restart(Animatable animatable) {
-        if (animatable.isRunning()) animatable.stop();
-        animatable.start();
+    private void restart(Drawable drawable) {
+        if (drawable instanceof Animatable) {
+            Animatable animatable = (Animatable) drawable;
+            if (animatable.isRunning()) animatable.stop();
+            animatable.start();
+        }
     }
 
-    private void release(Animatable animatable) {
-        if (animatable != null && animatable.isRunning())
-            animatable.stop();
+    private void release(Drawable drawable) {
+        if (drawable instanceof Animatable) {
+            Animatable animatable = (Animatable) drawable;
+            if (animatable != null && animatable.isRunning())
+                animatable.stop();
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        release((Animatable) ivLoading.getDrawable());
-        release((Animatable) ivSunEarthMoon.getDrawable());
+        release(ivPendulum1.getDrawable());
+        release(ivSunEarthMoon.getDrawable());
     }
 }

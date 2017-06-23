@@ -48,17 +48,17 @@
                 android:background="@color/bg"
                 android:src="@drawable/t3_anim_svg_target" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivPendulum1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/t1_anim_svg_demo" />
 
-                <ImageView
-                    android:id="@+id/ivLoading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/t1_anim_svg_demo" />
-
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/ivPendulum2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/t1_anim_svg_demo" />
 
         </LinearLayout>
     </ScrollView>
