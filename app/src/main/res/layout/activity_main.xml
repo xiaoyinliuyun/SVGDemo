@@ -41,6 +41,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="svgForJava"
+                android:text="Svg For Java" />
+
             <ImageView
                 android:id="@+id/ivSunEarthMoon"
                 android:layout_width="match_parent"
@@ -59,7 +65,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/t1_anim_svg_demo" />
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

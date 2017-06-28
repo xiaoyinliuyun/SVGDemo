@@ -1,11 +1,14 @@
-package com.yangkunjian.svgdemo;
+package com.yangkunjian.svgdemo.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.yangkunjian.svgdemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,5 +69,10 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         release(ivPendulum1.getDrawable());
         release(ivSunEarthMoon.getDrawable());
+    }
+
+    public void svgForJava(View v) {
+        Intent intent = new Intent(this, SvgForJavaActivity.class);
+        startActivity(intent);
     }
 }
