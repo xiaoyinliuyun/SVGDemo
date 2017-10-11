@@ -47,6 +47,14 @@
                 android:onClick="svgForJava"
                 android:text="Svg For Java" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="animatorGoing"
+                android:text="属性动画" />
+
+
+
             <ImageView
                 android:id="@+id/ivSunEarthMoon"
                 android:layout_width="match_parent"

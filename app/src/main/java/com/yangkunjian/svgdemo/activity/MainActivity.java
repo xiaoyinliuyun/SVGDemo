@@ -75,4 +75,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SvgForJavaActivity.class);
         startActivity(intent);
     }
+
+    public void animatorGoing(View v) {
+        Intent intent = new Intent(this, AnimatorDemoActivity.class);
+        startActivity(intent);
+    }
+
+
 }

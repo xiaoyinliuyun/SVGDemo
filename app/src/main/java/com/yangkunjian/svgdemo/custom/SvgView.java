@@ -66,6 +66,7 @@ public class SvgView extends View {
         mPaint.setColor(Color.RED);
         mPaint.setAntiAlias(true);
         mPaint.setStrokeWidth(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1, getResources().getDisplayMetrics()));
+
     }
 
     public void setPathData(String pathData) {
@@ -84,6 +85,7 @@ public class SvgView extends View {
         // 3.根据 相位和总长 计算刷新的距离
         float distance = INTERPOLATOR.getInterpolation(phase) * mLength;
         // 4.设置 Paint 本次绘制效果
+
         mPaint.setPathEffect(new DashPathEffect(new float[]{distance, mLength}, 0));
         // 5.绘图
         canvas.drawPath(mPath, mPaint);
